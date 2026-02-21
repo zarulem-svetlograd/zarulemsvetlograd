@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>За рулем - Магазин автозапчастей</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+        }
+        .bg-car {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7)), url('http://static.photos/automotive/1200x630/777');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .glass {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Hero Section -->
+    <div class="bg-car min-h-screen flex flex-col relative">
+        
+        <!-- Header -->
+        <header class="w-full p-6">
+            <div class="max-w-6xl mx-auto flex items-center justify-between">
+                <div class="flex items-center gap-3 bg-white/90 backdrop-blur-sm rounded-full px-6 py-3 shadow-lg">
+                    <i data-lucide="steering-wheel" class="w-8 h-8 text-red-600"></i>
+                    <div>
+                        <h1 class="text-2xl font-bold text-gray-900 tracking-tight">ЗА РУЛЁМ</h1>
+                        <p class="text-xs text-gray-600 font-semibold">Автозапчасти ВАЗ • ЛАДА</p>
+                    </div>
+                </div>
+                
+                <div class="hidden md:flex items-center gap-2 bg-red-600 text-white px-6 py-3 rounded-full shadow-lg">
+                    <i data-lucide="phone" class="w-5 h-5"></i>
+                    <span class="font-bold text-lg">79614926322</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="flex-grow flex items-center justify-center p-6">
+            <div class="max-w-4xl w-full text-center text-white space-y-8">
+                <div class="space-y-4">
+                    <h2 class="text-5xl md:text-7xl font-extrabold tracking-tight drop-shadow-lg">
+                        Запчасти для вашего<br>
+                        <span class="text-red-500">ВАЗ • ЛАДА</span>
+                    </h2>
+                    <p class="text-xl md:text-2xl font-medium text-gray-200 max-w-2xl mx-auto">
+                        Качественные масла, аккумуляторы и запчасти для отечественных автомобилей по доступным ценам
+                    </p>
+                </div>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+                    <a href="#products" class="bg-red-600 hover:bg-red-700 text-white font-bold py-4 px-8 rounded-full shadow-xl transition-all transform hover:scale-105 flex items-center justify-center gap-2">
+                        <i data-lucide="shopping-cart" class="w-5 h-5"></i>
+                        Наш ассортимент
+                    </a>
+                    <a href="#contacts" class="bg-white hover:bg-gray-100 text-gray-900 font-bold py-4 px-8 rounded-full shadow-xl transition-all transform hover:scale-105 flex items-center justify-center gap-2">
+                        <i data-lucide="map-pin" class="w-5 h-5"></i>
+                        Как найти нас
+                    </a>
+                </div>
+            </div>
+        </main>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <i data-lucide="chevron-down" class="w-8 h-8 text-white"></i>
+        </div>
+    </div>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20 px-6 bg-gray-50">
+        <div class="max-w-6xl mx-auto">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-bold text-gray-900 mb-4">Что мы предлагаем</h3>
+                <div class="w-24 h-1 bg-red-600 mx-auto rounded-full"></div>
+                <p class="mt-4 text-gray-600 text-lg">Всё необходимое для вашего автомобиля ВАЗ и ЛАДА</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Масла -->
+                <div class="glass rounded-2xl p-8 shadow-lg card-hover border border-gray-100">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-lucide="droplets" class="w-8 h-8 text-blue-600"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Моторные масла</h4>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 flex-shrink-0"></i>
+                            <span>Синтетические масла</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 flex-shrink-0"></i>
+                            <span>Полусинтетика</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 flex-shrink-0"></i>
+                            <span>Трансмиссионные масла</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 flex-shrink-0"></i>
+                            <span>Тормозная жидкость</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Аккумуляторы -->
+                <div class="glass rounded-2xl p-8 shadow-lg card-hover border border-gray-100">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-lucide="battery-charging" class="w-8 h-8 text-yellow-600"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Аккумуляторы</h4>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 flex-shrink-0"></i>
+                            <span>АКБ для всех моделей ВАЗ</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 flex-shrink-0"></i>
+                            <span>Гарантия от 1 года</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 flex-shrink-0"></i>
+                            <span>Проверка заряда</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 flex-shrink-0"></i>
+                            <span>Приём старых АКБ</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Запчасти -->
+                <div class="glass rounded-2xl p-8 shadow-lg card-hover border border-gray-100">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+                        <i data-lucide="wrench" class="w-8 h-8 text-red-600"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-gray-900 mb-4">Запчасти</h4>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 flex-shrink-0"></i>
+                            <span>Двигатель и КПП</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 flex-shrink-0"></i>
+                            <span>Подвеска и рулевое</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 flex-shrink-0"></i>
+                            <span>Тормозная система</span>
+                        </li>
+                        <li class="flex items-center gap-2">
+                            <i data-lucide="check" class="w-5 h-5 text-green-500 flex-shrink-0"></i>
+                            <span>Фильтры и ремни</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Working Hours Section -->
+    <section class="py-20 px-6 bg-white">
+        <div class="max-w-4xl mx-auto">
+            <div class="bg-gradient-to-r from-gray-900 to-gray-800 rounded-3xl p-8 md:p-12 shadow-2xl text-white text-center relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-red-600 rounded-full opacity-10 transform translate-x-32 -translate-y-32"></div>
+                <div class="absolute bottom-0 left-0 w-64 h-64 bg-red-600 rounded-full opacity-10 transform -translate-x-32 translate-y-32"></div>
+                
+                <div class="relative z-10">
+                    <div class="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i data-lucide="clock" class="w-8 h-8 text-white"></i>
+                    </div>
+                    <h3 class="text-3xl md:text-4xl font-bold mb-8">Режим работы</h3>
+                    
+                    <div class="grid md:grid-cols-2 gap-6 max-w-2xl mx-auto">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                            <div class="flex items-center justify-center gap-2 mb-3">
+                                <i data-lucide="calendar" class="w-5 h-5 text-red-400"></i>
+                                <span class="font-semibold text-lg">Понедельник — Пятница</span>
+                            </div>
+                            <p class="text-3xl font-bold text-white">08:00 — 17:00</p>
+                        </div>
+                        
+                        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-6 border border-white/20">
+                            <div class="flex items-center justify-center gap-2 mb-3">
+                                <i data-lucide="sun" class="w-5 h-5 text-yellow-400"></i>
+                                <span class="font-semibold text-lg">Суббота — Воскресенье</span>
+                            </div>
+                            <p class="text-3xl font-bold text-white">08:00 — 14:00</p>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 bg-red-600/20 backdrop-blur-sm rounded-2xl p-6 border border-red-500/30">
+                        <div class="flex items-center justify-center gap-3">
+                            <i data-lucide="map-pin" class="w-6 h-6 text-red-400"></i>
+                            <span class="text-xl font-bold">г. Светлоград, ул. Калинина, 24А</span>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-6 flex items-center justify-center gap-2 text-gray-300">
+                        <i data-lucide="info" class="w-5 h-5"></i>
+                        <span>Без перерыва на обед</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacts" class="py-20 px-6 bg-gray-50">
+        <div class="max-w-4xl mx-auto text-center">
+            <h3 class="text-4xl font-bold text-gray-900 mb-8">Свяжитесь с нами</h3>
+            
+            <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12">
+                <p class="text-xl text-gray-600 mb-8">Позвоните нам прямо сейчас для консультации и заказа запчастей!</p>
+                
+                <a href="tel:79614926322" class="inline-flex items-center gap-4 bg-red-600 hover:bg-red-700 text-white font-bold py-6 px-10 rounded-full shadow-2xl transition-all transform hover:scale-105 text-2xl md:text-3xl">
+                    <i data-lucide="phone-call" class="w-8 h-8"></i>
+                    <span>79614926322</span>
+                </a>
+                
+                <div class="mt-8 flex flex-col md:flex-row items-center justify-center gap-6 text-gray-600">
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="map-pin" class="w-5 h-5 text-red-600"></i>
+                        <span>Магазин "За рулем"</span>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <i data-lucide="car" class="w-5 h-5 text-red-600"></i>
+                        <span>Специализация: ВАЗ и ЛАДА</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8 px-6">
+        <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+            <div class="flex items-center gap-3">
+                <i data-lucide="steering-wheel" class="w-6 h-6 text-red-600"></i>
+                <span class="font-bold text-lg">ЗА РУЛЁМ</span>
+            </div>
+            <p class="text-gray-400 text-sm">© 2024 Магазин автозапчастей. Все права защищены.</p>
+            <div class="flex items-center gap-2 text-red-400 font-bold">
+                <i data-lucide="phone" class="w-4 h-4"></i>
+                <span>79614926322</span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Эта строка инициализирует иконки (проверяет undefined/null элементы)
+        lucide.createIcons();
+        
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('ref'));
+                // Эта строка имеет дело с undefined/null - проверка существования элемента
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
